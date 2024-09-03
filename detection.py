@@ -6,6 +6,7 @@ import torchvision
 from torch import nn
 from torchvision.models import mobilenet_v3_small
 import numpy as np
+from PIL import Image
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 warnings.filterwarnings("ignore")
@@ -17,15 +18,17 @@ def flip_text(x):
 
 def method1_prep(image):
     transforms = torchvision.models.MobileNet_V3_Small_Weights.IMAGENET1K_V1.transforms()
-    image = torch.from_numpy(image).permute(2, 0, 1)
+    image = torch.from_numpy(image).permute(2, 0, 1).float()
     return transforms(image)
 
 
 def method2_prep(image):
     transforms = torchvision.transforms.Compose([
         torchvision.transforms.Resize((256, 256)),
-        torchvision.transforms.CenterCrop((224, 224))
+        torchvision.transforms.CenterCrop((224, 224)),
+        torchvision.transforms.ToTensor()  # Transform to tensor at the end
     ])
+
     t_lower = 50
     t_upper = 150
     
@@ -36,10 +39,14 @@ def method2_prep(image):
     
     image = image[y:y+1080, x:x+1920]
 
-    img = torch.from_numpy(cv2.Canny(image, t_lower, t_upper)[np.newaxis, ...])
-    img = torch.vstack((img, img, img))
+    img = cv2.Canny(image, t_lower, t_upper)
+    img = np.stack([img] * 3, axis=0)  # Convert to 3 channels
+    img = img.transpose(1, 2, 0)  # HWC format for PIL conversion
 
-    return transforms(img.type(torch.float32))
+    # Convert numpy array to PIL Image for transforms
+    img_pil = Image.fromarray(img.astype(np.uint8))
+    
+    return transforms(img_pil)
 
 
 def model1_inf(x):
@@ -49,17 +56,18 @@ def model1_inf(x):
     model = mobilenet_v3_small(weights='DEFAULT')
     model.classifier[3] = nn.Linear(in_features=1024, out_features=2, bias=True)
 
-    model.load_state_dict(torch.load('./weights/method1(0.668).pt'))
+    # Load weights with map_location
+    model.load_state_dict(torch.load('./weights/method1(0.668).pt', map_location=device))
 
     model.eval()
 
-    with torch.inference_mode():
+    with torch.no_grad():
         model = model.to(device)
         image = image.to(device)
         output = torch.softmax(model(image), dim=1).detach().cpu()
         prediction = torch.argmax(output, dim=1).item()
         del model
-        torch.cuda.empty_cache()
+        torch.cuda.empty_cache()  # Clear cache if CUDA is used
         if prediction == 0:
             return "The image is not pixelated"
         else:
@@ -73,20 +81,19 @@ def model2_inf(x):
     model = mobilenet_v3_small(weights='DEFAULT')
     model.classifier[3] = nn.Linear(in_features=1024, out_features=2, bias=True)
 
-    image_np = image[0].permute(1, 2, 0).cpu().numpy()
-    image_np = (image_np * 255).astype(np.uint8)  
-    model.load_state_dict(torch.load('./weights/method2(0.960).pt'))
+    # Load weights with map_location
+    model.load_state_dict(torch.load('./weights/method2(0.960).pt', map_location=device))
     print("\nModel weights loaded successfully")
 
-    model.eval()  
+    model.eval()
 
-    with torch.inference_mode():
+    with torch.no_grad():
         model = model.to(device)
         image = image.to(device)
         output = torch.softmax(model(image), dim=1).detach().cpu()
         prediction = torch.argmax(output, dim=1).item()
         del model
-        torch.cuda.empty_cache()
+        torch.cuda.empty_cache()  # Clear cache if CUDA is used
         if prediction == 0:
             return "The image is not pixelated"
         else:
@@ -110,5 +117,4 @@ with gr.Blocks() as app:
         method.change(fn=classify_image, inputs=[image_input, method], outputs=output_text)
         image_input.change(fn=classify_image, inputs=[image_input, method], outputs=output_text)
 
-        
 app.launch(share=False)
