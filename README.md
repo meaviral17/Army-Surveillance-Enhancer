@@ -196,5 +196,3 @@ Open the provided link in any browser to access the interface.
 Any kind of enhancement or contribution is welcomed!
 
 ---
-
-You can directly copy and paste this content into your README file! Let me know if you need further adjustments.
