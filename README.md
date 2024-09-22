@@ -1,9 +1,5 @@
 # 🚀 Army-Surveillance-Enhancer 🔍
 
-<p align="center">
-    <img src="images/logo.gif" alt="Logo">
-</p>
-
 **🚀 Army-Surveillance-Enhancer** introduces novel models designed from scratch to address the dual challenges of **detecting and enhancing pixelated images** with **exceptional speeds**. The proposed detection model, leveraging **MobileNet_v3_small combined with Canny edge detection**, demonstrates significant improvements over baseline methods on datasets like **Div2K** and **Flickr2K**. This model achieves higher precision, recall, F1 score, and accuracy while maintaining a lower false positive rate. Despite a slightly reduced speed compared to the baseline, the model remains efficient, operating at **3505 FPS**. ⚡
 
 For image correction, the project introduces **MiniSRGAN**, a novel variant of SRGAN. **MiniSRGAN** showcases enhanced performance in terms of PSNR, SSIM, LPIPS metrics, and speed compared to traditional methods like Bicubic and other deep learning approaches (such as EDSR, FSRCNN, and SRGAN). **MiniSRGAN** strikes a balance between visual quality and computational efficiency, operating at **21 FPS** with a compact model size of **3.605 MB**. 🖼️✨
@@ -301,14 +297,14 @@ July 05, 2024: Making a pipeline which will detect and correct in the same app
 
 ## Team Members
 
-- Garv Bhaskar
-- Kshitij Kumar
-- Aviral Srivastava
-- Shipli Anand
+- Aviral Srivastava 22BAI1187
+- Garv Bhaskar 22BAI1371
+- Kshitij Kumar 22BAI1161
+- Shipli Anand 22BAI
 
 ## Mentor
 
-- Verjin Raja Sarobin
+- Vergin Raja Sarobin M
 
 ## Contributing
 
