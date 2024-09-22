@@ -171,9 +171,7 @@ The testing of the **MiniSRGAN** model was conducted on the **Set5** dataset. Th
 
 The models, when trained on the COCO dataset (subset with ~21k images), performed poorly with HD images.
 
-**Solution
-
-:**
+**Solution:**
 
 The dataset used for training was enriched with images exceeding 1920x1080 resolution.
 
