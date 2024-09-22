@@ -111,11 +111,13 @@ Overall, the proposed method demonstrates superior performance and is a clear im
 | Speed (FPS)       | -                       | 21                        | 12                        | 16                       | 188                      |
 | Model Size (MB)   | -                       | 3.605                     | 5.874                    | 5.789                    | 0.049                    |
 
+---
 **Sample Output:**
 
 ***1) Top Row: Input, Middle Row: Output, Bottom Row: Target (MiniSRGAN)***
 
 ![Super Resolution Result](images/sr_result.png)
+
 Close up (MiniSRGAN):
 ![Close-up Super Resolution Result](images/sr_closeup.png)
 
