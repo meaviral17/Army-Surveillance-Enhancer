@@ -299,10 +299,6 @@ July 05, 2024: <s> Making a pipeline which will detect and correct in the same a
 
 ---
 
-## Contributing
-
-Any kind of enhancement or contribution is welcomed!
-
 ## Team Members
 
 - Garv Bhaskar
@@ -313,3 +309,7 @@ Any kind of enhancement or contribution is welcomed!
 ## Mentor
 
 - Verjin Raja Sarobin
+
+## Contributing
+
+Any kind of enhancement or contribution is welcomed!
