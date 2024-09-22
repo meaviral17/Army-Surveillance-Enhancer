@@ -7,7 +7,7 @@ For image correction, the project introduces three new novel variants of SRGAN, 
 Both models were implemented entirely from scratch and are hosted on HuggingFace for accessibility, although optimal performance is observed with GPU-based execution.
 
 <p align="center">
-    <img src="images/sr_closeup_transition.gif" width=300px>
+    <img src="image/sr_closeup_transition.gif" width=300px>
 </p>
 
 ## :bookmark_tabs: Table of Contents
@@ -59,9 +59,9 @@ The baseline model was not evaluated on the Div2K dataset due to its poor perfor
 
 <p float="left">
    <h3>Proposed Method:</h3>
-   <img src="images/cf_detection_method2.png" width="800" />
+   <img src="image/cf_detection_method2.png" width="800" />
    <h3>Baseline:</h3>
-   <img src="images/cf_detection_method1.png" width="800" />
+   <img src="image/cf_detection_method1.png" width="800" />
 </p>
 
 #### Metrics on Div2K
@@ -78,7 +78,7 @@ The baseline model was not evaluated on the Div2K dataset due to its poor perfor
 
 ### Confusion Matrix:
 
-![cf_method2_test](images/cf_detection_method2_test.png)
+![cf_method2_test](image/cf_detection_method2_test.png)
 
 ### Summary
 
@@ -100,26 +100,26 @@ The proposed method outperforms the baseline significantly across all evaluation
 
 ***1) Top Row: Input, Middle Row: Output, Bottom Row: Target (MobileSR)***
 
-![Super Resolution Result](images/sr_result.png)
+![Super Resolution Result](image/sr_result.png)
 
 Close up (MobileSR):
-![Close-up Super Resolution Result](images/sr_closeup.png)
+![Close-up Super Resolution Result](image/sr_closeup.png)
 
 ## Architecture
 
 ### Detector Architecture:
 
-![detector](images/detector_architecture_white.jpeg)
+![detector](image/detector_architecture_white.jpeg)
 
 ### TinySRGAN Architecture:
 
-![tinysrgan](images/tinysrgan_architecture.png)
+![tinysrgan](image/tinysrgan_architecture.png)
 
 ### MiniSRGAN/MiniSRResNet Architecture:
 
 Here B = 8 (for 8 residual blocks)
 
-![miniSRGAN](images/minisrgan_architecture.png)
+![miniSRGAN](image/minisrgan_architecture.png)
 
 ## Training and Testing Dataset Details
 
@@ -183,7 +183,7 @@ Open the provided link in any browser to access the interface.
 ├── time_calculation
 ├── model_size_calculation
 ├── experiment_detection  
-├── images
+├── image
 ├── image_analysis
 ├── sample2_correction_model_results
 ├── weights
