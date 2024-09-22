@@ -190,7 +190,18 @@ Open the provided link in any browser to access the interface.
 ├── detect_app.py
 └── correct_app.py
 ```
+## Team Members
 
+- Garv Bhaskar
+- Kshitij Kumar
+- Aviral Srivastava
+- Shipli Anand
+
+## Mentor
+
+- Verjin Raja Sarobin
+
+---
 ## Contributing
 
 Any kind of enhancement or contribution is welcomed!
