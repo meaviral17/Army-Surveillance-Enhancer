@@ -10,9 +10,10 @@ Both models were implemented entirely from scratch and are hosted on HuggingFace
     <img src="images/sr_closeup_transition.gif" width=300px>
 </p>
 
+### Try it out- [Click here](https://huggingface.co/spaces/meaviral17/Army-Surveillance-Enhancer)
+
 ## :bookmark_tabs: Table of Contents
 
-- [Try It Yourself](#fire-try-it-yourself-fire)
 - [Results](#results)
 - [Model Architecture](#architecture)
 - [Training and Testing Dataset Details](#training-and-testing-dataset-details)
@@ -143,7 +144,7 @@ The detector was trained on the train split of the **Flickr2K** dataset, which c
 #### Detector Testing
 
 The detector was tested in two phases:
-1. **Test split of the Flickr2K dataset**: Consisting of 284 images, the test set was used to validate the model's performance on unseen data.
+1. **Test split of the Flickr2K, Aircrafts, and Tank datasets**: The test set was used to validate the model's performance on unseen data.
 2. **Full dataset of Div2K**: The full Div2K dataset (train + val) was used to ensure that the test images were entirely independent of the trained dataset, offering a comprehensive evaluation.
 
 ### Super Resolution Model Training (MiniSRGAN)
@@ -288,14 +289,6 @@ Example:
 │
 └── correct_app.py                            - Correction inference app.py file
 ```
-
----
-
-## Future Work
-
-July 05, 2024: Making a pipeline which will detect and correct in the same app
-
----
 
 ## Team Members
 
