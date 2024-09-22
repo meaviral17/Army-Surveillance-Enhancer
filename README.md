@@ -303,4 +303,13 @@ July 05, 2024: <s> Making a pipeline which will detect and correct in the same a
 
 Any kind of enhancement or contribution is welcomed!
 
----
+## Team Members
+
+- Garv Bhaskar
+- Kshitij Kumar
+- Aviral Srivastava
+- Shipli Anand
+
+## Mentor
+
+- Verjin Raja Sarobin
