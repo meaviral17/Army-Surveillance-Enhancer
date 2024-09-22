@@ -38,6 +38,8 @@ Both models were implemented entirely from scratch and are hosted on HuggingFace
 
 - Div2K (Full dataset - 900 images)
 - Flickr2K (Test split - 284 images)
+- Military Tanks Dataset (Test split - 105 images)
+- Military Aircraft Dataset (Test split - 140 images)
 
 **Performance:**
 
