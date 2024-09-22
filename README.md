@@ -1,4 +1,6 @@
 # 🚀 Army-Surveillance-Enhancer 🔍
+## High-Speed Pixel Enhancement in Military Imagery:  
+### A Novel Approach Utilizing MobileNet_v3_small and Canny Edge Integration
 
 **🚀 Army-Surveillance-Enhancer** introduces novel models designed from scratch to address the dual challenges of **detecting and enhancing pixelated images** with **exceptional speeds**. The proposed detection model, leveraging **MobileNet_v3_small combined with Canny edge detection**, demonstrates significant improvements over baseline methods on datasets like **Div2K** and **Flickr2K**. This model achieves higher precision, recall, F1 score, and accuracy while maintaining a lower false positive rate. Despite a slightly reduced speed compared to the baseline, the model remains efficient, operating at **3505 FPS**. ⚡
 
@@ -10,11 +12,14 @@ Both models were implemented entirely from scratch and are hosted on HuggingFace
     <img src="images/sr_closeup_transition.gif" width=300px>
 </p>
 
-### Try it out- [Click here](https://huggingface.co/spaces/meaviral17/Army-Surveillance-Enhancer)
+----
+### Try out the Unified App here- [Click here](https://huggingface.co/spaces/meaviral17/Army-Surveillance-Enhancer)
+### Try out the Correction App here- [Click here](https://huggingface.co/spaces/meaviral17/CorrectionApp)
+### Try out the Detection App here- [Click here](https://huggingface.co/spaces/meaviral17/DetectApp)
+----
 
 ## :bookmark_tabs: Table of Contents
 
-- [Results](#results)
 - [Model Architecture](#architecture)
 - [Training and Testing Dataset Details](#training-and-testing-dataset-details)
 - [Training Details](#training-details)
@@ -22,7 +27,6 @@ Both models were implemented entirely from scratch and are hosted on HuggingFace
 - [Inference: Detection](#inference-detection)
 - [Inference: Correction](#inference-correction)
 - [Directory Structure](#directory-structure)
-- [Future Work](#future-work)
 - [Contributing](#contributing)
 
 ---
@@ -295,7 +299,7 @@ Example:
 - Aviral Srivastava 22BAI1187
 - Garv Bhaskar 22BAI1371
 - Kshitij Kumar 22BAI1161
-- Shipli Anand 22BAI
+- Shipli Anand 22BAI1477
 
 ## Mentor
 
