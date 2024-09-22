@@ -295,7 +295,7 @@ Example:
 
 ## Future Work
 
-July 05, 2024: <s> Making a pipeline which will detect and correct in the same app </s>
+July 05, 2024: Making a pipeline which will detect and correct in the same app
 
 ---
 
