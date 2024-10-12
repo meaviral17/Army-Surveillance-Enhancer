@@ -10,10 +10,8 @@ import numpy as np
 device = "cuda" if torch.cuda.is_available() else "cpu"
 warnings.filterwarnings("ignore")
 
-
 def flip_text(x):
     return x[::-1]
-
 
 def method1_prep(image):
     transforms = torchvision.models.MobileNet_V3_Small_Weights.IMAGENET1K_V1.transforms()

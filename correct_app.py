@@ -16,8 +16,7 @@ class _conv(nn.Conv2d):
                                kernel_size = kernel_size, stride = stride, padding = (kernel_size) // 2, bias = True)
         
         self.weight.data = torch.normal(torch.zeros((out_channels, in_channels, kernel_size, kernel_size)), 0.02)
-        self.bias.data = torch.zeros((out_channels))
-        
+        self.bias.data = torch.zeros((out_channels))        
         for p in self.parameters():
             p.requires_grad = True
         
