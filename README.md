@@ -299,7 +299,7 @@ Example:
 - Aviral Srivastava 22BAI1187
 - Garv Bhaskar 22BAI1371
 - Kshitij Kumar 22BAI1161
-- Shipli Anand 22BAI1477
+- Shilpi Anand 22BAI1477
 
 ## Mentor
 
