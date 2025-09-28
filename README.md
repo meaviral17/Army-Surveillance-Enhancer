@@ -14,8 +14,6 @@ Both models were implemented entirely from scratch and are hosted on HuggingFace
 
 ----
 ### Try out the Unified App here- [Click here](https://huggingface.co/spaces/meaviral17/Army-Surveillance-Enhancer)
-### Try out the Correction App here- [Click here](https://huggingface.co/spaces/meaviral17/CorrectionApp)
-### Try out the Detection App here- [Click here](https://huggingface.co/spaces/meaviral17/DetectApp)
 ----
 
 ## :bookmark_tabs: Table of Contents
